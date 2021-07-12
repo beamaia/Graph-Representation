@@ -12,22 +12,28 @@ class Matriz(Grafo):
 
         self.matriz = []
         
+        # Inicializa uma matriz num_vertices X num_vertices 
+        # com os valores zerados
         for linha in range(self.num_vertices):
             aux_linha = []
             for coluna in range(self.num_vertices):
-                aux_linha.append(0)
+                aux_linha.append(0)    
             self.matriz.append(aux_linha)
 
     def adiciona_aresta(self, origin, destino, peso):
+        # Se o grafo nao for valorado, o peso eh 1
         if not self.valorado:
             peso = 1
 
+        # Adiciona aresta origin->destino
         self.matriz[origin-1][destino-1] = peso
         
+        # Se grafo nao for direcionado destino->origin
         if not self.direcionado:
             self.matriz[destino-1][origin-1] = peso
 
     def __str__(self):
+        # String auxiliar para impressao
         if self.direcionado:
             divisor = "->"
         else:
