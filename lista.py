@@ -11,8 +11,8 @@ class VerticeDestino:
         """
             Construtor de VerticeDestino. 
 
-            :param vertice: valor do vertice 
-            :param peso: valor do peso 
+            `param` vertice: valor do vertice 
+            `param` peso: valor do peso 
         """
 
         self.vertice = vertice
@@ -23,8 +23,8 @@ class VerticeDestino:
             String representativa do vertice destino e peso.
             Eh necessario saber se o grafo eh valorado ou nao. 
 
-            :param valorada: Flag que indica se uma aresta eh valorada. 
-            :return: string representativa do vertice destino + peso
+            `param` valorada: Flag que indica se uma aresta eh valorada. 
+            `return`: string representativa do vertice destino + peso
         """
 
         if valorada:
@@ -45,9 +45,9 @@ class Lista(Grafo):
             Construtor de Lista. Inicializa uma lista vazia do 
             tamanho do numero de vertices
 
-            :param vertices: numero de vertices 
-            :param arestas: numero de arestas
-            :param direcionado: flag que identifica se grafo eh direcionado
+            `param` vertices: numero de vertices 
+            `param` arestas: numero de arestas
+            `param` direcionado: flag que identifica se grafo eh direcionado
         """
 
         super().__init__(vertices, arestas, direcionado)
@@ -63,9 +63,9 @@ class Lista(Grafo):
         """
             Adiciona aresta para lista.  
 
-            :param origin: valor do vertice origin
-            :param destino: valor do vertice destino
-            :param peso: peso da aresta
+            `param` origin: valor do vertice origin
+            `param` destino: valor do vertice destino
+            `param` peso: peso da aresta
         """
 
         # Cria vertice destino + peso
@@ -84,7 +84,7 @@ class Lista(Grafo):
         """
             Representacao string do objeto Lista.
 
-            :return: string representativa do objeto Lista
+            `return`: string representativa do objeto Lista
         """
         
         # String auxiliar para apresentacao
