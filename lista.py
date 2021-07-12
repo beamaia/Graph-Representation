@@ -2,29 +2,54 @@ from sys import version_info
 from grafo import Grafo
 
 class VerticeDestino:
-    '''
-    Classe destinada para armazenar o valor do vertice destino
-    e o custo do peso da aresta
-    '''
+    """
+        Classe destinada para armazenar o valor do vertice destino
+        e o custo do peso da aresta.
+    """
 
     def __init__(self, vertice, peso):
+        """
+            Construtor de VerticeDestino. 
+
+            :param vertice: valor do vertice 
+            :param peso: valor do peso 
+        """
+
         self.vertice = vertice
         self.peso = peso
 
     def str(self, valorada):
+        """
+            String representativa do vertice destino e peso.
+            Eh necessario saber se o grafo eh valorado ou nao. 
+
+            :param valorada: Flag que indica se uma aresta eh valorada. 
+            :return: string representativa do vertice destino + peso
+        """
+
         if valorada:
             return f"{self.vertice} [label = {self.peso}];"
         else:
             return f"{self.vertice};"            
 
 class Lista(Grafo):
-    '''
-    Classe destinada para armazenar lista de adjacencia.
-    Por padrao, a lista inicializa com vertices e arestas
-    igual a zero e a flag direcionado como False caso nao
-    for fornecido parametros.
-    '''
+    """
+        Classe destinada para armazenar lista de adjacencia.
+        Por padrao, a lista inicializa com vertices e arestas
+        igual a zero e a flag direcionado como False caso nao
+        for fornecido parametros.
+    """
+
     def __init__(self, vertices=0, arestas=0, direcionado=False):
+        """
+            Construtor de Lista. Inicializa uma lista vazia do 
+            tamanho do numero de vertices
+
+            :param vertices: numero de vertices 
+            :param arestas: numero de arestas
+            :param direcionado: flag que identifica se grafo eh direcionado
+        """
+
         super().__init__(vertices, arestas, direcionado)
 
         self.vertices = []
@@ -35,6 +60,14 @@ class Lista(Grafo):
             self.vertices.append([])
 
     def adiciona_aresta(self, origin, destino, peso):
+        """
+            Adiciona aresta para lista.  
+
+            :param origin: valor do vertice origin
+            :param destino: valor do vertice destino
+            :param peso: peso da aresta
+        """
+
         # Cria vertice destino + peso
         vertice_destino = VerticeDestino(destino, peso)
 
@@ -48,7 +81,13 @@ class Lista(Grafo):
             self.vertices[destino - 1].append(vertice_origin)
 
     def __str__(self):
-        # String auxiliar para impressao
+        """
+            Representacao string do objeto Lista.
+
+            :return: string representativa do objeto Lista
+        """
+        
+        # String auxiliar para apresentacao
         if self.direcionado:
             divisor = "->"
         else:
