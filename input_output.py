@@ -6,8 +6,8 @@ def eh_direcionado(entrada):
     """ 
         Função que verifica se o grafo passado como entrada é direcionado 
         
-        :`param` entrada: arquivo de entrada contendo a descrição do grafo
-        :`returns`: True se é direcionado, False se não
+        `param` entrada: arquivo de entrada contendo a descrição do grafo
+        `returns`: True se é direcionado, False se não
     """
 
     if "digrafo" in entrada.lower():
@@ -24,9 +24,9 @@ def le_entrada(entrada, representa_lista):
     """ 
         Função que le o arquivo de entrada e cria o grafo 
 
-        :`param` entrada: arquivo de entrada contendo a descrição do grafo
-        :`param` representa_lista: forma que será representado o grafo
-        :`returns`: a representação do grafo em lista ou matriz de adjacencia
+        `param` entrada: arquivo de entrada contendo a descrição do grafo
+        `param` representa_lista: forma que será representado o grafo
+        `returns`: a representação do grafo em lista ou matriz de adjacencia
     """
     try: 
         arquivo = open(entrada, "r")
@@ -78,7 +78,7 @@ def escreve_grafo(grafo):
         se direcionado: digraph
         se não direcionado: graph
         se valorado: tipo do grafo + v
-        :`param` grafo: estrutura contendo o grafo
+        `param` grafo: estrutura contendo o grafo
     """
     tag = ""
     if grafo.valorado:
