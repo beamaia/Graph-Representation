@@ -1,32 +1,44 @@
+# Modulos da Biblioteca Padrao
 import sys
 
+# Modulos secundarios
+from input_output import le_entrada, escreve_grafo
+
+# Função que imprime o menu de escolha da representação do grafo
 def menu():
     print("Digite o valor da representação você deseja utilizar.")
+    print("(0) Terminar o programa")
     print("(1) Lista de adjacência")
     print("(2) Matriz de adjacência")
     
+    # Roda enquanto não for um valor válido
     while(True):
-        escolha = int(input())
-        
+        # Tratando caso em que a entrada seja um char
+        try:
+            escolha = int(input())
+        except:
+            escolha = ""
+            print("Isso não é um número!")
+            
         if escolha == 1:
             return True
         elif escolha == 2:
             return False
+        elif escolha == 0:
+            print("Programa finalizado")
+            sys.exit()
         else:
             print("Essa escolha não é valida! Por favor digite um valor válido.")
 
-# def ler_arquivo(caminho):
-
-    
-#     [[],[],[],[],[]]    
-
-
-#     return grafo
-    
-
 
 if __name__ == "__main__":
-    args = sys.argv
-    
+    # Guarda em args os argumentos recebidos na 
+    # linha de comando ao executar o programa
+    args = sys.argv    
     representa_lista = menu()
+    
+    grafo = le_entrada(args[1], representa_lista)
+    escreve_grafo(grafo)
+    
+    
 
