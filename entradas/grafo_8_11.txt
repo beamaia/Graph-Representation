@@ -1,0 +1,15 @@
+c caso de teste do pdf
+c n = |V| e m = |E| de um grafo G = (V, E)
+8 11
+c lista de arestas não valoradas (valor 0)
+1 2 0
+1 3 0
+2 3 0
+2 4 0
+2 5 0
+4 5 0
+4 6 0
+4 8 0
+5 8 0
+6 7 0
+6 8 0
