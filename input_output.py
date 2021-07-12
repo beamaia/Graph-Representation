@@ -6,8 +6,8 @@ def eh_direcionado(entrada):
     """ 
         Função que verifica se o grafo passado como entrada é direcionado 
         
-        :param entrada: arquivo de entrada contendo a descrição do grafo
-        :returns: True se é direcionado, False se não
+        :`param` entrada: arquivo de entrada contendo a descrição do grafo
+        :`returns`: True se é direcionado, False se não
     """
 
     if "digrafo" in entrada.lower():
@@ -24,9 +24,9 @@ def le_entrada(entrada, representa_lista):
     """ 
         Função que le o arquivo de entrada e cria o grafo 
 
-        :param entrada: arquivo de entrada contendo a descrição do grafo
-        :param representa_lista: forma que será representado o grafo
-        :returns: a representação do grafo em lista ou matriz de adjacencia
+        :`param` entrada: arquivo de entrada contendo a descrição do grafo
+        :`param` representa_lista: forma que será representado o grafo
+        :`returns`: a representação do grafo em lista ou matriz de adjacencia
     """
     try: 
         arquivo = open(entrada, "r")
@@ -45,6 +45,7 @@ def le_entrada(entrada, representa_lista):
 
         # Ignora linhas de comentario
         if line[0] != "c":
+            # Leitura da primeira linha (qtd de vertices e arestas)
             if inicio:
                 line = line.split()
                 
@@ -56,12 +57,14 @@ def le_entrada(entrada, representa_lista):
 
             else:
                 line = line.split()
+                # Leitura do peso da primeira aresta (se 0 então não valorado)
                 if prim_aresta:
                     if int(line[2]) == 0:
                         grafo.eh_valorado(False)
                     else:
                         grafo.eh_valorado(True)
                     prim_aresta = False
+
                 grafo.adiciona_aresta(int(line[0]), int(line[1]), int(line[2]))
     
     arquivo.close()
@@ -69,6 +72,14 @@ def le_entrada(entrada, representa_lista):
 
 
 def escreve_grafo(grafo):
+    """ 
+        Função que escreve no arquivo de saida a representação do grafo
+        O nome do arquivo varia conforme o tipo do grafo 
+        se direcionado: digraph
+        se não direcionado: graph
+        se valorado: tipo do grafo + v
+        :`param` grafo: estrutura contendo o grafo
+    """
     tag = ""
     if grafo.valorado:
         tag = "v"
