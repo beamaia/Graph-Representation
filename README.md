@@ -29,6 +29,10 @@ Para adicionar uma aresta a lista de adjacência é preciso informar o vértice 
 
 A classe `Matriz` do arquivo `matriz.py` apresenta a implementação de uma matriz de adjacência de um grafo. 
 
+Para inicializar uma Matriz é preciso informar a quantidade de vértices e arestas do grafo e este é ou não direcionado. A matriz é inicializada com a quantidade de linhas e colunas sendo igual a quantidade de vértices, e preenchida de zeros.
+
+Para adicionar uma resta a matriz de adjacência é preciso informas os vértices de origem e destino dela, e também seu peso. Se o grafo é não valorado o valor registrado na matriz será 1, e não o peso da aresta.
+
 ### Apresentação
 O arquivo é salvo com a extenção `.dot`. Um grafo não direcionado recebe o nome de `grafo G` e um digrafo recebe o nome de `digrafo G`.
 
