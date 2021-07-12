@@ -1,0 +1,42 @@
+- Função para ler o nome do arquivo: retornar true ou false? Função respode "É direcionado?"
+- Usuario escolhe se quer utilizar lista de adjacencia ou matriz
+    - Apresenta menu
+- Leitura por lista
+- Leitura por matriz
+- Impressão do grafo
+
+Estruturas:
+- Ter variavel digrafo = True/False
+
+Classe Grafo:
+    - n_vertice int
+    - n_aresta int
+    - digrafo bool
+    - valorado bool
+    - grafo
+    
+- Classe Lista
+    - 
+
+    - inicializar com tamanho n 
+    - em grafo nao direcionado, adiciona nos dois VerticeDestino
+        ex.: A - B 
+             
+    Classe VerticeDestino
+        A -> [[B, 3], [C, 2]] 
+        B -> A, B, D
+        
+        [v0, v1, v2]
+        
+        v0 -> [objeto, objeto, objeto]
+
+
+- Classe matriz
+    - inicializar matriz NxN zerada
+    
+       A   B  C
+   A [ 0  34  1]
+   B [ 34  0  1]
+   C [ 1   1  0]
+
+def __str__
