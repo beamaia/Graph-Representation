@@ -12,9 +12,9 @@ class Matriz(Grafo):
             Construtor de Matriz. Inicializa uma matriz nula NxN, 
             no qual N eh o numero de vertices, 
 
-            :param vertices: numero de vertices 
-            :param arestas: numero de arestas
-            :param direcionado: flag que identifica se grafo eh direcionado
+            `param` vertices: numero de vertices 
+            `param` arestas: numero de arestas
+            `param` direcionado: flag que identifica se grafo eh direcionado
         """
 
         super().__init__(vertices, arestas, direcionado)
@@ -33,9 +33,9 @@ class Matriz(Grafo):
         """
             Adiciona aresta para lista.  
 
-            :param origin: valor do vertice origin
-            :param destino: valor do vertice destino
-            :param peso: peso da aresta
+            `param` origin: valor do vertice origin
+            `param` destino: valor do vertice destino
+            `param` peso: peso da aresta
         """
 
         # Se o grafo nao for valorado, o peso eh 1
@@ -53,7 +53,7 @@ class Matriz(Grafo):
         """
             Representacao string do objeto Lista.
 
-            :return: string representativa do objeto Lista
+            `return` string representativa do objeto Lista
         """
 
         # String auxiliar para impressao
