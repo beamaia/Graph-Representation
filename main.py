@@ -4,8 +4,22 @@ import sys
 # Modulos secundarios
 from input_output import le_entrada, escreve_grafo
 
-# Função que imprime o menu de escolha da representação do grafo
 def menu():
+    """ 
+        Apresenta o menu de opcoes. O usuario pode escolher entre tres
+        valores de 0 a 2. Sendo:
+
+        (0) Terminar o programa
+
+        (1) Lista de adjacência
+
+        (2) Matriz de adjacência 
+
+        :return: True se a representacao a utilizar eh lista, 
+        False caso for matriz.
+    """
+
+    # Apresenta mensagem de escolha
     print("Digite o valor da representação você deseja utilizar.")
     print("(0) Terminar o programa")
     print("(1) Lista de adjacência")
