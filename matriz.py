@@ -1,13 +1,22 @@
 from grafo import Grafo
 
 class Matriz(Grafo):
-    '''
-    Classe destinada para armazenar matriz de adjacencia.
-    Por padrao, a matriz inicializa com vertices e arestas
-    igual a zero e a flag direcionado como False caso nao
-    for fornecido parametros.
-    '''
+    """
+        Classe destinada para armazenar matriz de adjacencia.
+        Por padrao, a matriz inicializa com vertices e arestas
+        igual a zero e a flag direcionado como False caso nao
+        for fornecido parametros.
+    """
     def __init__(self, vertices=0, arestas=0, direcionado=False):
+        """
+            Construtor de Matriz. Inicializa uma matriz nula NxN, 
+            no qual N eh o numero de vertices, 
+
+            :param vertices: numero de vertices 
+            :param arestas: numero de arestas
+            :param direcionado: flag que identifica se grafo eh direcionado
+        """
+
         super().__init__(vertices, arestas, direcionado)
 
         self.matriz = []
@@ -21,6 +30,14 @@ class Matriz(Grafo):
             self.matriz.append(aux_linha)
 
     def adiciona_aresta(self, origin, destino, peso):
+        """
+            Adiciona aresta para lista.  
+
+            :param origin: valor do vertice origin
+            :param destino: valor do vertice destino
+            :param peso: peso da aresta
+        """
+
         # Se o grafo nao for valorado, o peso eh 1
         if not self.valorado:
             peso = 1
@@ -33,6 +50,12 @@ class Matriz(Grafo):
             self.matriz[destino-1][origin-1] = peso
 
     def __str__(self):
+        """
+            Representacao string do objeto Lista.
+
+            :return: string representativa do objeto Lista
+        """
+
         # String auxiliar para impressao
         if self.direcionado:
             divisor = "->"
@@ -55,4 +78,5 @@ class Matriz(Grafo):
                     resposta += ";\n"
 
         resposta += "}"
+        
         return resposta
