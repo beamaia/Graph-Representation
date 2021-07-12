@@ -1,5 +1,7 @@
 # Representação de grafo
 
+Implementação I1 feita por Beatriz Maia e Sophie Dilhon para a disciplina de Teoria dos Grafos.
+
 O programa permite a leitura de um grafo tanto por matriz de adjacência, quanto por lista de adjacência. O usuário pode escolher qual representação ele quer utilizar através do menu de escolha.
 
 ## Sobre
