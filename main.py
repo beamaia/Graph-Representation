@@ -3,6 +3,7 @@ import sys
 
 # Modulos secundarios
 from input_output import le_entrada, escreve_grafo
+from opcao import Opcao
 
 def menu():
     """ 
@@ -32,11 +33,11 @@ def menu():
             escolha = ""
             print("Isso não é um número!")
             
-        if escolha == 1:
+        if escolha == Opcao.LISTA:
             return True
-        elif escolha == 2:
+        elif escolha == Opcao.MATRIZ:
             return False
-        elif escolha == 0:
+        elif escolha == Opcao.ENCERRAR:
             print("Programa finalizado")
             sys.exit()
         else:
